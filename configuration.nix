@@ -148,6 +148,7 @@
     libtool
     gnupg
     fastfetch
+    pfetch
     pandoc
     shfmt
     mpv
