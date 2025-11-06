@@ -4,6 +4,7 @@
   home.username = "soham";
   home.homeDirectory = "/home/soham";
   home.stateVersion = "25.05";
+  programs.fastfetch.enable = true;
   programs.starship = {
     enable = true;
   };
@@ -28,7 +29,7 @@
       hms = "home-manager switch -b backup --flake $HOME/nix-dotfiles/; source $HOME/.bashrc";
       nrs = "sudo nixos-rebuild switch --flake $HOME/nix-dotfiles/";
     };
-    # initExtra = "eval '$(starship init bash)'";
+    initExtra = "fastfetch";
   };
   programs.notmuch = {
     enable = true;
