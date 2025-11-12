@@ -28,6 +28,7 @@
       llt = "eza -al --icons --tree --group-directories-first --sort=name --git";
       hms = "home-manager switch -b backup --flake $HOME/nix-dotfiles/; source $HOME/.bashrc";
       nrs = "sudo nixos-rebuild switch --flake $HOME/nix-dotfiles/";
+      v = "nvim";
     };
     initExtra = "fastfetch";
   };
