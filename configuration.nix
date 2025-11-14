@@ -79,7 +79,11 @@
   services.emacs = {
     enable = true;
   };
-
+  services.emacs.package = with pkgs; (
+    (emacsPackagesFor emacs-pgtk).emacsWithPackages (
+      epkgs: [ epkgs.vterm ]
+    )
+  );
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -89,6 +93,9 @@
     description = "Soham";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
+          epkgs: [ epkgs.pdf-tools ]
+        ))
       eza
       arandr
       lynx
