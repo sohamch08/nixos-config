@@ -30,7 +30,11 @@
       nrs = "sudo nixos-rebuild switch --flake $HOME/nix-dotfiles/";
       v = "nvim";
     };
-    initExtra = "fastfetch";
+    initExtra = ''
+      if [ -z "$IN_NIX_SHELL" ]; then
+        fastfetch
+      fi
+    '';
   };
   programs.notmuch = {
     enable = true;

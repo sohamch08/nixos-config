@@ -78,12 +78,10 @@
   };
   services.emacs = {
     enable = true;
+  # package = ((pkgs.emacsPackagesFor pkgs.emacs-pgtk).emacsWithPackages (epkgs: [
+  #     epkgs.vterm 
+  #   ]));
   };
-  services.emacs.package = with pkgs; (
-    (emacsPackagesFor emacs-pgtk).emacsWithPackages (
-      epkgs: [ epkgs.vterm ]
-    )
-  );
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -126,9 +124,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
-        epkgs: [ epkgs.pdf-tools ]
-      ))
+    # ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
+    #     epkgs: [ epkgs.pdf-tools ]
+    #   ))
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
