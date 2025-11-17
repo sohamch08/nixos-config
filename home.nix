@@ -18,7 +18,26 @@
   };
   programs.neovim = {
     enable = true;
-    extraConfig = "set relativenumber\n set clipboard=unnamedplus";
+    extraConfig = "
+      number        = true;
+      relativenumber = true;
+      autoindent    = true;
+      autowrite     = true;
+      autowriteall  = true;
+      cursorline    = true;
+      mouse         = "a";
+      swapfile      = false;
+      clipboard     = "unnamedplus";
+      showtabline   = 2;
+      ignorecase    = true;
+      splitbelow    = true;
+      splitright    = true;
+      tabstop       = 4;
+      shiftwidth    = 4;
+      expandtab     = true;
+      hidden        = true;
+      signcolumn    = "yes";   # or "auto"
+      conceallevel  = 0;
   };
   programs.bash = {
     enable = true;
