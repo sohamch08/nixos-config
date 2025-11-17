@@ -19,25 +19,25 @@
   programs.neovim = {
     enable = true;
     extraConfig = "
-      number        = true;
-      relativenumber = true;
-      autoindent    = true;
-      autowrite     = true;
-      autowriteall  = true;
-      cursorline    = true;
-      mouse         = "a";
-      swapfile      = false;
-      clipboard     = "unnamedplus";
-      showtabline   = 2;
-      ignorecase    = true;
-      splitbelow    = true;
-      splitright    = true;
-      tabstop       = 4;
-      shiftwidth    = 4;
-      expandtab     = true;
-      hidden        = true;
-      signcolumn    = "yes";   # or "auto"
-      conceallevel  = 0;
+set number relativenumber
+set autoindent
+set autowrite
+set autowriteall
+set cursorline
+set mouse=a
+set noswapfile
+set clipboard=unnamedplus
+set showtabline=2
+set ignorecase
+set splitbelow splitright
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set hidden
+set signcolumn=auto
+set conceallevel=0
+set signcolumn=yes
+    ";
   };
   programs.bash = {
     enable = true;
