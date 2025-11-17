@@ -160,7 +160,7 @@
     lsof
     starship
     mu
-    texlab
+    digestif
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
