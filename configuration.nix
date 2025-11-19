@@ -152,7 +152,7 @@
     lsof
     starship
     mu
-    lua54Packages.digestif
+    texlab
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
