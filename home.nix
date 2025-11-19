@@ -8,6 +8,7 @@
   programs.starship = {
     enable = true;
   };
+  programs.emacs.enable = true;
   programs.git = {
     enable = true;
     userName = "sohamch08";
