@@ -78,6 +78,7 @@
   };
   services.emacs = {
     enable = true;
+    package = pkgs.emacs;
   };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -153,7 +154,8 @@
     starship
     mu
     texlab
-    lua54Packages.digestif
+    # lua54Packages.digestif
+    nixd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
