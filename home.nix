@@ -198,7 +198,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    PATH = "$HOME/.emacs.d/bin/:$PATH";
+    PATH = "$HOME/bin:$HOME/.emacs.d/bin/:$PATH";
     DOOMDIR = "$HOME/.config/doom";
     DOOMLOCALDIR = "$HOME/.emacs.d/.local";
     NOTMUCH_CONFIG = "/home/soham/.config/notmuch/default/config";
