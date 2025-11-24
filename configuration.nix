@@ -60,6 +60,8 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  harware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
