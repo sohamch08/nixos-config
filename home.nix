@@ -49,6 +49,9 @@
       hms = "home-manager switch -b backup --flake $HOME/nix-dotfiles/; source $HOME/.bashrc";
       nrs = "sudo nixos-rebuild switch --flake $HOME/nix-dotfiles/";
       v = "nvim";
+      pls = "sudo !!";
+      garbageRemove = "nix-collect-garbage -d";
+      garbageRemoveAll = "sudo nix-collect-garbage -d";
     };
     initExtra = ''
       if [ -z "$IN_NIX_SHELL" ]; then
