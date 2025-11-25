@@ -116,7 +116,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   fonts.packages = with pkgs; [
-    nerd-fonts
+    nerdfonts
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
