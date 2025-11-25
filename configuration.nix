@@ -115,17 +115,16 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  fonts.packages = with pkgs; [
-    nerdfonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
+  fonts.packages = (builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)) ++ [
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk-sans
+    pkgs.noto-fonts-color-emoji
+    pkgs.liberation_ttf
+    pkgs.fira-code
+    pkgs.fira-code-symbols
+    pkgs.mplus-outline-fonts.githubRelease
+    pkgs.dina-font
+    pkgs.proggyfonts
   ];
   environment.systemPackages = with pkgs; [
     vim
