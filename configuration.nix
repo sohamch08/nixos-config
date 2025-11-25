@@ -166,9 +166,8 @@
     lsof
     starship
     mu
-    texlab
-    # lua54Packages.digestif
-    nixd
+    killall
+    age
   ];
 
   # programs.msmtp = {
