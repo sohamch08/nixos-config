@@ -115,6 +115,18 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  fonts.packages = with pkgs; [
+    nerd-fonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
+  ];
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -160,22 +172,22 @@
     nixd
   ];
 
-  programs.msmtp = {
-    enable = true;
-    setSendmail = true; # set the system sendmail to msmtp's
-    accounts = {
-      default = {
-        host = "tifr.res.in";
-        port = 25;
-        auth = true;
-        tls = true;
-        tls_starttls = true;
-        from = "soham.chatterjee@tifr.res.in";
-        user = "soham.chatterjee@tifr.res.in";
-        logfile = "~/.config/msmtp.log";
-      };
-    };
-  };
+  # programs.msmtp = {
+  #   enable = true;
+  #   setSendmail = true; # set the system sendmail to msmtp's
+  #   accounts = {
+  #     default = {
+  #       host = "tifr.res.in";
+  #       port = 25;
+  #       auth = true;
+  #       tls = true;
+  #       tls_starttls = true;
+  #       from = "soham.chatterjee@tifr.res.in";
+  #       user = "soham.chatterjee@tifr.res.in";
+  #       logfile = "~/.config/msmtp/msmtp.log";
+  #     };
+  #   };
+  # };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
