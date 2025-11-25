@@ -93,12 +93,6 @@
     packages = with pkgs; [
       eza
       arandr
-      lynx
-      notmuch
-      isync
-      msmtp
-      abook
-      urlscan
       kdePackages.kate
       thunderbird
       vscode
@@ -133,6 +127,12 @@
     clang
     unzip
     xclip
+    lynx
+    notmuch
+    isync
+    msmtp
+    abook
+    urlscan
     emacsPackages.pdf-tools
     cmake
     tree
