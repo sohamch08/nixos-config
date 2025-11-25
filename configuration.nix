@@ -185,7 +185,7 @@
           Hostname 158.144.102.255
           User soham
           IdentityFile ~/.ssh/id_ed25519
-    "
+    ";
   };
 
   # Open ports in the firewall.
