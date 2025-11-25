@@ -202,7 +202,7 @@
     DOOMDIR = "$HOME/.config/doom";
     DOOMLOCALDIR = "$HOME/.emacs.d/.local";
     NOTMUCH_CONFIG = "/home/soham/.config/notmuch/default/config";
-    MANPAGE = "nvim";
+    MANPAGER = "nvim";
   };
 
   # Let Home Manager install and manage itself.
