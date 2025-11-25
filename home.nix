@@ -77,7 +77,6 @@
     ];
   };
   # programs.mbsync.enable = true;
-  programs.msmtp.enable = true;
 	#  accounts.email = {
 	#    maildirBasePath = "/home/soham/.local/share/email";
 	#    accounts.tifr = {
