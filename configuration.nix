@@ -171,7 +171,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh{
+  services.openssh = {
     enable = true;
     ports = [ 5432 ];
     settings = {
