@@ -2,14 +2,15 @@
   description = "Soham Flake!";
 
   inputs = {
-    nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager.url = "github:nix-community/home-manager/release-25.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -17,15 +18,18 @@
     in {
       nixosConfigurations = {
         turing = lib.nixosSystem {
-	  inherit system;
-          modules = [ ./configuration.nix ];  
+          inherit system;
+          modules = [ ./configuration.nix ];
         };
       };
+
       homeConfigurations = {
         soham = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-          modules = [ ./home.nix ];  
+          inherit pkgs;
+          modules = [ ./home.nix ];
+          extraSpecialArgs = { inherit inputs; };
         };
       };
     };
 }
+
