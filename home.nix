@@ -57,6 +57,10 @@
       if [ -z "$IN_NIX_SHELL" ]; then
         fastfetch
       fi
+      bandit() {
+        read -p "Enter bandit level number: " n
+        ssh -p 2220 "bandit${n}@bandit.labs.overthewire.org"
+      }
     '';
   };
   programs.notmuch = {
@@ -138,21 +142,16 @@
   #     imap_passive = "yes";
   #     imap_check_subscribed = "no";
   #
-  #     # Define mailboxes directly in settings
   #     mailboxes = "+INBOX +Sent +Trash +Drafts +Junk";
   #   };
   #   # Sorting - NEWEST FIRST (latest emails at top)
   #   sort = "date-received";
   # };
   nixpkgs.config = {
-    # This allows all unfree packages for this Home Manager configuration
     allowUnfree = true;
   };
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
      pkgs.hello
-     # pkgs.eza
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -167,8 +166,6 @@
     # '')
 
   ];
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -199,14 +196,12 @@
   #  /etc/profiles/per-user/soham/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
     PATH = "$HOME/bin:$HOME/.emacs.d/bin/:$PATH";
     DOOMDIR = "$HOME/.config/doom";
     DOOMLOCALDIR = "$HOME/.emacs.d/.local";
     NOTMUCH_CONFIG = "/home/soham/.config/notmuch/default/config";
     MANPAGER = "nvim +Man!";
   };
-
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
