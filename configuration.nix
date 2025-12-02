@@ -168,6 +168,7 @@
     mu
     killall
     age
+    kdePackages.kdeconnect-kde
   ];
 
   # programs.msmtp = {
