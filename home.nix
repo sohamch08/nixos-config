@@ -57,10 +57,6 @@
       if [ -z "$IN_NIX_SHELL" ]; then
         fastfetch
       fi
-      bandit() {
-        read -p "Enter bandit level number: " n
-        ssh -p 2220 "bandit${n}@bandit.labs.overthewire.org"
-      }
     '';
   };
   programs.notmuch = {
