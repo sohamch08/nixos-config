@@ -176,6 +176,7 @@
     lua51Packages.luarocks
     lua51Packages.magick  # REQUIRED for image.nvim
     imagemagick
+    lazygit
   ];
 
   # programs.msmtp = {
