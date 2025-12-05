@@ -170,6 +170,8 @@
     killall
     age
     kdePackages.kdeconnect-kde
+    gcc
+    gnumake
   ];
 
   # programs.msmtp = {
