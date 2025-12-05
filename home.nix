@@ -17,29 +17,29 @@
       init.defaultBranch = "main";
     };
   };
-  programs.neovim = {
-    enable = true;
-    extraConfig = "
-      set number relativenumber
-      set autoindent
-      set autowrite
-      set autowriteall
-      set cursorline
-      set mouse=a
-      set noswapfile
-      set clipboard=unnamedplus
-      set showtabline=2
-      set ignorecase
-      set splitbelow splitright
-      set tabstop=4
-      set shiftwidth=4
-      set expandtab
-      set hidden
-      set signcolumn=auto
-      set conceallevel=0
-      set signcolumn=yes
-    ";
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   extraConfig = "
+  #     set number relativenumber
+  #     set autoindent
+  #     set autowrite
+  #     set autowriteall
+  #     set cursorline
+  #     set mouse=a
+  #     set noswapfile
+  #     set clipboard=unnamedplus
+  #     set showtabline=2
+  #     set ignorecase
+  #     set splitbelow splitright
+  #     set tabstop=4
+  #     set shiftwidth=4
+  #     set expandtab
+  #     set hidden
+  #     set signcolumn=auto
+  #     set conceallevel=0
+  #     set signcolumn=yes
+  #   ";
+  # };
   programs.bash = {
     enable = true;
     shellAliases = {
