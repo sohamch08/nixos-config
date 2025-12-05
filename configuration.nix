@@ -130,7 +130,8 @@
     # vim
     wget
     git
-    # neovim
+    neovim
+    wl-clipboard
     emacs
     ripgrep
     coreutils
@@ -169,9 +170,7 @@
     killall
     age
     kdePackages.kdeconnect-kde
-  ] ++ [(pkgs.neovim.override {
-    withClipboard = true;
-  })];
+  ];
 
   # programs.msmtp = {
   #   enable = true;
