@@ -171,7 +171,7 @@
     kdePackages.kdeconnect-kde
   ] ++ [(pkgs.neovim.override {
     withClipboard = true;
-  })]
+  })];
 
   # programs.msmtp = {
   #   enable = true;
