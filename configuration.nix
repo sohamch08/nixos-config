@@ -169,9 +169,9 @@
     killall
     age
     kdePackages.kdeconnect-kde
-  ] ++ (pkgs.neovim.override {
+  ] ++ [(pkgs.neovim.override {
     withClipboard = true;
-  })
+  })]
 
   # programs.msmtp = {
   #   enable = true;
