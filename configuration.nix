@@ -172,6 +172,10 @@
     kdePackages.kdeconnect-kde
     gcc
     gnumake
+    lua51
+    lua51Packages.luarocks
+    lua51Packages.magick  # REQUIRED for image.nvim
+    imagemagick
   ];
 
   # programs.msmtp = {
