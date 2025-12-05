@@ -127,10 +127,10 @@
     pkgs.proggyfonts
   ];
   environment.systemPackages = with pkgs; [
-    vim
+    # vim
     wget
     git
-    neovim
+    # neovim
     emacs
     ripgrep
     coreutils
@@ -169,7 +169,9 @@
     killall
     age
     kdePackages.kdeconnect-kde
-  ];
+  ] ++ (pkgs.neovim.override {
+    withClipboard = true;
+  })
 
   # programs.msmtp = {
   #   enable = true;
