@@ -172,9 +172,9 @@
     kdePackages.kdeconnect-kde
     gcc
     gnumake
-    lua
-    lua54Packages.luarocks
-    lua54Packages.magick  # REQUIRED for image.nvim
+    lua51Packages.lua
+    lua51Packages.luarocks
+    lua51Packages.magick  # REQUIRED for image.nvim
     imagemagick
   ];
 
@@ -231,5 +231,6 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowBroken = true;
 
 }
