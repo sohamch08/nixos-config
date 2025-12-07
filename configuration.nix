@@ -170,12 +170,12 @@
     killall
     age
     kdePackages.kdeconnect-kde
-    gcc
-    gnumake
-    lua51Packages.lua
-    lua51Packages.luarocks
-    lua51Packages.magick  # REQUIRED for image.nvim
-    imagemagick
+    # gcc
+    # gnumake
+    # lua51Packages.lua
+    # lua51Packages.luarocks
+    # lua51Packages.magick  # REQUIRED for image.nvim
+    # imagemagick
     lazygit
   ];
 
